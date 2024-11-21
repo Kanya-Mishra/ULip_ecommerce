@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/category")
+@RequestMapping()
 public class CategoryController {
     @Autowired
     public CategoryServices categoryservices;
 
-    @GetMapping()
+    @GetMapping("/api/category")
     public List<Category> getAllCategory(){
         return categoryservices.getAllCategory();
     }
